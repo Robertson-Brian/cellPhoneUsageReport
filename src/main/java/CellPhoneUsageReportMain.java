@@ -116,9 +116,11 @@ public class CellPhoneUsageReportMain {
         }
 
         //write report to file
-        String reportFileName = "src/main/out/CellPhoneUsageReport" + new Date() + ".csv";
+//        String reportFile = "src/out/CellPhoneUsageReport " + new Date() + ".csv";
+        String reportFile = "src/out/CellPhoneUsageReport.csv";
 
-        try (PrintWriter writer = new PrintWriter(reportFileName)) {
+        // Creates a PrintWriter
+        try (PrintWriter writer = new PrintWriter(reportFile)) {
             StringBuilder sb = new StringBuilder();
             sb.append("Date Report Run : " + new Date() + "\n");
             sb.append("Number Of Phones : " + (cellPhone.size() - 1) + "\n");
